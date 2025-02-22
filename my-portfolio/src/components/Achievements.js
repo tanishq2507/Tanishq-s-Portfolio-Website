@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 const Achievements = () => {
   return (
-    <section className="p-8 bg-gray-50">
-      <h2 className="text-3xl font-bold text-center mb-8">Achievements</h2>
+    <section className="p-8 bg-gray-900 transition-colors duration-300">
+      <h2 className="text-3xl font-bold text-center text-gray-100 mb-8">Achievements</h2>
       <motion.ul 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="max-w-3xl mx-auto list-disc list-inside space-y-2 text-lg"
+        className="max-w-3xl mx-auto list-disc list-inside space-y-2 text-lg text-gray-300"
       >
         <li>Qualified for ICPC regionals 2023, securing the top position on campus.</li>
         <li>Rank 99 amongst 228 teams in ICPC Amritapuri onsite round.</li>

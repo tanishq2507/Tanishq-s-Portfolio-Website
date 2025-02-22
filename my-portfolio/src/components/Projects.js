@@ -26,8 +26,8 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="p-8 bg-white">
-      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+    <section className="p-8 bg-gray-900 transition-colors duration-300">
+      <h2 className="text-3xl font-bold text-center text-gray-100 mb-8">Projects</h2>
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div 
@@ -35,11 +35,11 @@ const Projects = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="border border-gray-300 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow"
+            className="border border-gray-700 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow bg-gray-800"
           >
-            <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-            <p className="mb-4">{project.description}</p>
-            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+            <h3 className="text-2xl font-semibold mb-2 text-gray-100">{project.title}</h3>
+            <p className="mb-4 text-gray-300">{project.description}</p>
+            <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
               View on GitHub
             </a>
           </motion.div>

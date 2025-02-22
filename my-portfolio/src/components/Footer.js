@@ -7,7 +7,7 @@ const Footer = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-gray-900 text-white text-center p-4"
+      className="bg-gray-800 text-gray-200 text-center p-4"
     >
       <p>&copy; {new Date().getFullYear()} Tanishq Lohia. All rights reserved.</p>
     </motion.footer>
