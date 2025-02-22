@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const projects = [
   {
@@ -25,15 +26,22 @@ const projects = [
 ];
 
 const Projects = () => {
+  const location = useLocation();
+  const [animationKey, setAnimationKey] = useState(0);
+  
+  useEffect(() => {
+    setAnimationKey(prev => prev + 1);
+  }, [location.pathname]);
+
   return (
     <section className="p-8 bg-gray-900 transition-colors duration-300">
       <h2 className="text-3xl font-bold text-center text-gray-100 mb-8">Projects</h2>
       <div className="grid gap-8 md:grid-cols-2">
         {projects.map((project, index) => (
           <motion.div 
-            key={index}
+            key={`${animationKey}-${index}`}
             initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             className="border border-gray-700 rounded-lg p-6 shadow-lg hover:shadow-2xl transition-shadow bg-gray-800"
           >

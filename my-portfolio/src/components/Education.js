@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const Education = () => {
+  const location = useLocation();
+  const [animationKey, setAnimationKey] = useState(0);
+  
+  useEffect(() => {
+    setAnimationKey(prev => prev + 1);
+  }, [location.pathname]);
+
   return (
     <section className="p-8 bg-gray-900 transition-colors duration-300">
       <h2 className="text-3xl font-bold text-center text-gray-100 mb-8">Education</h2>
       <motion.div 
+        key={animationKey}
         initial={{ opacity: 0, x: 50 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5 }}
         className="max-w-xl mx-auto border border-gray-700 rounded-lg p-6 shadow-md bg-gray-800"
       >

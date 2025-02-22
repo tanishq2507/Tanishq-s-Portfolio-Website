@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 const Home = () => {
+  const location = useLocation();
+  const [animationKey, setAnimationKey] = useState(0);
+  
+  useEffect(() => {
+    setAnimationKey(prev => prev + 1);
+  }, [location.pathname]);
+
   return (
     <motion.section 
+      key={animationKey}
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
