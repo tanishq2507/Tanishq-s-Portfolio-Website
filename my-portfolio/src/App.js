@@ -8,6 +8,7 @@ import Education from './components/Education';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CodingProfiles from './components/CodingProfiles';
 
 function App() {
   // Always enable dark mode by adding the "dark" class to the <html> element
@@ -26,6 +27,7 @@ function App() {
           <Route path="/education" element={<Education />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/coding-profiles" element={<CodingProfiles />} />
         </Routes>
         <Footer />
       </div>
