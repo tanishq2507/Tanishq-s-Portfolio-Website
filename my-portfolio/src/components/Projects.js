@@ -19,9 +19,9 @@ const projects = [
     github: "https://github.com/tanishq2507/Automated_Bill_screenshot_tool_for_swiggy"
   },
   {
-    title: "Dog Image Gallery",
-    description: "An interactive image gallery application using React and the Dogs API with responsive design and dynamic background color picker.",
-    github: "https://github.com/tanishq2507/Dog-Images-Gallery-"
+    title: "Sach Ai",
+    description: "A sophisticated web application using Flask (Python) that provides AI-powered content analysis for news articles and YouTube videos",
+    github: "https://github.com/tanishq2507/Sach-Ai"
   }
 ];
 
